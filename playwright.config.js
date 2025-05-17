@@ -1,6 +1,11 @@
+require('dotenv').config()
+
 module.exports = {
-  testDir: './playwright',
+  
+  testDir: './tests',
   use: {
-    headless: true,
+      headless: false,
+      browserName: 'chromium',
+
   },
 };
