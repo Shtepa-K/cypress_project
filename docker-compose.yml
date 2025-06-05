@@ -1,0 +1,10 @@
+version: '2.4'
+
+services:
+  cypress:
+    image: cypress/included:12.17.4
+    container_name: cypress-firefox-tests
+    volumes:
+      - .:/e2e
+    working_dir: /e2e
+    command: npx cypress run --browser firefox --spec "cypress/e2e/spec.cy.js"
