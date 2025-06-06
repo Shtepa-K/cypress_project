@@ -1,30 +1,24 @@
 {
-  "name": "cypress_project",
+  "name": "playwright_project",
   "version": "1.0.0",
   "description": "",
-  "main": "cypress.config.js",
+  "main": "index.js",
   "dependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "axios": "^1.9.0",
-    "cypress": "^12.17.4"
+    "dotenv": "^16.5.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.36.0",
-    "@types/faker": "^6.6.11"
+    "typescript": "^5.8.3"
   },
   "scripts": {
-    "test": "npx playwright test",
-    "cypress:open": "npx cypress open"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Shtepa-K/cypress_project.git"
+    "test": "npx playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Shtepa-K/cypress_project/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shtepa-K/cypress_project.git"
   },
   "homepage": "https://github.com/Shtepa-K/cypress_project#readme"
 }
