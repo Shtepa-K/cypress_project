@@ -2,9 +2,9 @@ name: Cypress Tests in Docker
 
 on:
   push:
-    branches: [main]
+    branches: [second]
   pull_request:
-    branches: [main]
+    branches: [second]
 
 jobs:
   cypress-run:
