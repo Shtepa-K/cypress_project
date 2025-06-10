@@ -3,6 +3,7 @@ name: Cypress Tests in Docker
 on:
   push:
     branches: [second]
+    
   pull_request:
     branches: [second]
 
@@ -14,6 +15,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run Cypress tests inside Docker container
-        run: |
-          docker run --rm -v ${{ github.workspace }}/cypress_project:/e2e -w /e2e cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1 sh -c "npm ci && npx cypress run --browser chrome"
+      -  name: Run Cypress tests inside Docker container
+  run: |
+    docker run --rm -v ${{ github.workspace }}:/e2e -w /e2e/cypress_project \
+      cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1 \
+      sh -c "npm ci && npx cypress run --browser chrome"
