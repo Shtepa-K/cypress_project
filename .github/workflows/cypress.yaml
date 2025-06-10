@@ -3,9 +3,11 @@ name: Cypress Test in Docker
 on:
   push:
     branches:
-      - second  
+      - second
   pull_request:
-      - second  
+  
+    branches:
+      - second
 
 jobs:
   cypress-run:
